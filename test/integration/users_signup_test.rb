@@ -19,7 +19,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     name       = "Example User"
     email      = "user@example.com"
     password   = "foobar"
-    assert_diference 'User.count', 1 do
+    assert_difference 'User.count', 1 do
       post_via_redirect users_path, user: { 
         name: name,
         email: email,
