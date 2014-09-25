@@ -16,9 +16,9 @@ class ActiveSupport::TestCase
   end
   
   # Log in a test user
-  def log_in_as(user, options = ())
+  def log_in_as(user, options = {})
     password    = options[:password]     || 'password'
-    remember_me = options[:rememeber_me] || '1'
+    remember_me = options[:remember_me] || '1'
     if integration_test?
       post sessions_path, session: { 
         email: user.email, 
